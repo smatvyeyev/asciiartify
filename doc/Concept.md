@@ -35,9 +35,40 @@ K3d is easy to use, even for beginners. This is important for teams, as they oft
 
 ## Demo k3d cluster run
 
+1)
+install k3d:
+
+    wget -q -O - https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | TAG=v5.0.0 bash
+
+    k3d version
+
+2)
+kreate cluster:
+
+    k3d cluster create demo
+    kubectl cluster-info
+
+3)
+run demo app:
+
+    kubectl run demo --image=k8s.gcr.io/echoserver:1.4 --port=8080 kubectl get no kubectl get po
+
+4) expose app:
+
+    kubectl port-forward demo 8080:8080&
+
+5) chek resault
+
+    curl localhost:8080
+
+6) delete demo cluster
+
+    k3d  cluster delete demo
 
 
-[![asciicast] (https://asciinema.org/a/)]
+
+### demo video
+[![asciicast](https://asciinema.org/a/590725.svg)](https://asciinema.org/a/590725)
 
 
 
