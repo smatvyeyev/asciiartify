@@ -31,7 +31,7 @@
 ## get admin password 
 
     kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo 
-    67SVU0fzQ7mQ5Q2R
+   UnD19fU4TuIV9hWl
 
 ## login to GUI
 
@@ -41,6 +41,5 @@
 
     Once logged in, you will be directed to the ArgoCD dashboard.
 
+![Alt text](argocd-login1.gif)
 
-![Alt text](<Screenshot 2023-06-11 225058.png>)
-![Alt text](<Screenshot 2023-06-11 225156.png>)
