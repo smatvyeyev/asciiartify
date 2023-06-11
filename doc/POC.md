@@ -31,7 +31,8 @@
 ## get admin password 
 
     kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo 
-   UnD19fU4TuIV9hWl
+   
+  save password i safe place. 
 
 ## login to GUI
 
