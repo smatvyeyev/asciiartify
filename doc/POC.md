@@ -14,31 +14,31 @@
 
 # install Argo CD
 
-kubectl create namespace argocd
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+    kubectl create namespace argocd
+    kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
-kubectl get ns
-kubectl get all -n argocd
-kubectl get pods -n argocd -w
+    kubectl get ns
+    kubectl get all -n argocd
+    kubectl get pods -n argocd -w
 
 # forward GUI port
 
-kubectl port-forward svc/argocd-server -n argocd 8080:443&
+    kubectl port-forward svc/argocd-server -n argocd 8080:443&
 
-(codespace portforwarding workaround -  Ports tab -> change portmapping 8080 to  HTTPS and port visibility to PUBLIC)
+    (codespace portforwarding workaround -  Ports tab -> change portmapping 8080 to  HTTPS and port visibility to PUBLIC)
 
 # get admin password 
 
-kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo 
-67SVU0fzQ7mQ5Q2R
+    kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo 
+    67SVU0fzQ7mQ5Q2R
 
 # login to GUI
 
-Open a web browser and navigate to the ArgoCD URL.
+    Open a web browser and navigate to the ArgoCD URL.
 
-On the login screen, enter your username and password and click "Login".
+    On the login screen, enter your username and password and click "Login".
 
-Once logged in, you will be directed to the ArgoCD dashboard.
+    Once logged in, you will be directed to the ArgoCD dashboard.
 
 
 
