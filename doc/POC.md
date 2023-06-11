@@ -41,6 +41,6 @@
 
     Once logged in, you will be directed to the ArgoCD dashboard.
 
-![Alt text](<Screenshot 2023-06-11 225156.png>)
-![Alt text](<Screenshot 2023-06-11 225058.png>)
 
+![Alt text](<Screenshot 2023-06-11 225058.png>)
+![Alt text](<Screenshot 2023-06-11 225156.png>)
