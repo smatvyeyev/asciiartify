@@ -14,7 +14,6 @@
 
 # install Argo CD
 
-```
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
@@ -34,5 +33,12 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 67SVU0fzQ7mQ5Q2R
 
 # login to GUI
+
+Open a web browser and navigate to the ArgoCD URL.
+
+On the login screen, enter your username and password and click "Login".
+
+Once logged in, you will be directed to the ArgoCD dashboard.
+
 
 
